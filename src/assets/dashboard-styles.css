@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+:root {
+    --primary-color: #ea95d3;
+    --accent-color: #ffc107;
+    --background-color: #f8f9fa;
+    --text-color: #693838;
+}
+body{
+    font-family: "Ubuntu", sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+button{
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: .5rem;
+    padding: .8rem 0;
+    color: var(--background-color);
+    margin-top: 3rem;
+}
+a{
+    color: var(--primary-color);
+}
+form>p{
+    font-size: 1.5rem;
+}
+.user-input{
+    display: flex;
+    flex-direction: column;
+    border-radius:.5rem;
+    margin-bottom: 1rem;
+}
+label{
+    margin-bottom: .3rem;
+}
+input, textarea{
+    padding: .5rem;
+    border-radius: .3rem;
+    border: 1px solid var(--primary-color);
+    outline: none;
+}
+textarea{
+    resize: none;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    z-index: 1;
+    display: none;
+}
+
+.create-task {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.new-task-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 500px;
+    z-index: 3; 
+    position: relative;
+}
+
+.fa-plus{
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    padding: .4rem;
+    border-radius: 0 .3rem .3rem .3rem;
+    margin-left: .6rem;
+}
+.fa-x{
+    display: block;
+    width: 5%;
+    margin-left: auto;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    padding: .5rem;
+    border-radius: 5rem;
+    text-align: center;
+}
+.dashboard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+#greeting{
+    color: var(--text-color);
+}
+select{
+    color: var(--text-color);
+    outline: none;
+    border: 1px solid var(--text-color);
+    border-radius: .4rem;
+    padding: .3rem ;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    background-color:var(--background-color);
+    padding: .8rem;
+    flex-basis: 25%;
+    border-radius: .6rem;
+}
+.status{
+    margin: 0;
+    padding:.4rem;
+    font-size: .8rem;
+
+}
+.drafts{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: .9rem;
+}
+.completed{
+    color: #4acf4a;
+    border: 1px solid #4acf4a;
+    border-radius: .9rem;
+}
+.undone{
+    color: #e18739;
+    border: 1px solid #e18739;
+    border-radius: .9rem;
+}
+.task-list{
+    margin-top: 2rem;
+}
+.task-item{
+    display: flex;
+    justify-content: space-between;
+}
+.task>input{
+    padding: 2rem;
+    /* width: 2rem; */
+}
+.task-item .task{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+}
+.task-item button{
+    flex-basis: 20%;
+    margin: 0;
+    padding: .5rem .5rem;
+}
+.task-title{
+    text-wrap:balance;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}

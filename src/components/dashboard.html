@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../assets/dashboard-styles.css">
+    <script src="../dashboard-script.js" defer></script>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Dashboard</h1>
+        <div class="">
+            <select name="" id="filter">
+                <option value="allTasks"><i class="fa-solid fa-filter" id="filter">All Tasks</i></option>
+                <option value="completedTasks">Completed</option>
+                <option value="activeTasks">Active</option>
+                <option value="draftTasks">Draft</option>
+            </select>
+            <!-- <i class="fa-solid fa-filter" id="filter"></i> -->
+            <i class="fa-solid fa-plus" id="addTask"></i>
+        </div>
+    </div>
+    <p id="greeting"></p>
+    <p>Todos:</p>
+    <div class="cards todos">
+        <div class="card ">
+            <span class="status completed">completed</span>
+            <p id="undoneCompleted">9 tasks</p>
+        </div>
+        <div class="card ">
+            <span class="status drafts">drafts</span>
+            <p id="drafts">9 tasks</p>
+        </div>
+        <div class="card ">
+            <span class="status undone">undone</span>
+            <p id="undoneTasks">9 tasks</p>
+        </div>
+    </div>
+    <div class="backdrop" id="modal">
+        <div class="create-task">
+            <form class="new-task-form" id="todoForm">
+                <i class="fa-solid fa-x" id="close-modal"></i>
+                <p id="modal-name">Create a task</p>
+                <div class="user-input">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+        
+                <div class="user-input">
+                    <label for="description">Description:</label>
+                    <textarea id="description" rows="4" name="description"></textarea>
+                </div>
+        
+        
+                <div class="user-input">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" name="startDate">
+                </div>
+        
+                <div class="user-input">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="endDate">
+                </div>
+        
+                <label for="isBacklogged">Backlogged:</label>
+        
+                <input type="checkbox" id="isBacklogged" name="isBacklogged">
+        
+                <button type="submit" id="submit-task">Save</button>
+            </form>
+        </div>
+    </div>
+    <section>
+        <div class="task-list" >
+            <ul id="taskList">
+                <li class="task-item">
+                    <div class="task">
+                        <input type="checkbox" id="task-completed">
+                        <p class="task-title">Task </p>
+                    </div>
+                    <div class="buttons">
+                        <button class="edit-task" id="edit">Edit</button>
+                        <button class="delete-task" id="delete">Delete</button>
+                    </div>
+                </li>
+            </ul>
+            
+            
+        </div>
+    </section>
+</body>
+</html>

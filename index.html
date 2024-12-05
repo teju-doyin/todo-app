@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <script src="/src/main.js" defer></script>
+    <link rel="stylesheet" href="./src/assets/login-styles.css">
+  </head>
+  <body>
+    <form method="POST" id="loginForm">
+      <p>Login to your account</p>
+      <div class="user-input">
+          <label for="username">Username:</label>
+          <input type="name" id="username" name="name" placeholder="Username" required>
+      </div>
+    
+      <div class="user-input">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Password" >
+      </div> 
+
+      <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="/src/components/signup.html">Sign Up</a></p> 
+    
+  </body>
+</html>
